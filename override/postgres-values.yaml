@@ -1,0 +1,6 @@
+name: vds-pg
+users:
+  - name: admin
+    databases:
+      - velocity
+    options: 'SUPERUSER'

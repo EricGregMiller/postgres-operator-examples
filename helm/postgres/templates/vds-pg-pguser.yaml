@@ -1,0 +1,12 @@
+{{- with .Values.users -}}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ default .Release.Name .Values.name }}-pguser-{{ .name }}
+  labels:
+    postgres-operator.crunchydata.com/cluster: {{ default .Release.Name .Values.name }}
+    postgres-operator.crunchydata.com/pguser: {{ .name }}
+stringData:
+  password: admin
+{{- end -}}
