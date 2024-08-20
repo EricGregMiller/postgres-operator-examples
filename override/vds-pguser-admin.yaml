@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: vds-pg-pguser-admin
+  labels:
+    postgres-operator.crunchydata.com/cluster: vds-pg
+    postgres-operator.crunchydata.com/pguser: admin
+stringData:
+  password: admin
