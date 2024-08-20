@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: vds-pg-pguser-{ secretKeyRef: { name: velocity-database-secret, key: POSTGRE_DB_ADMIN_USER } }
-  labels:
-    postgres-operator.crunchydata.com/cluster: vds-pg
-    postgres-operator.crunchydata.com/pguser: { secretKeyRef: { name: velocity-database-secret, key: POSTGRE_DB_ADMIN_USER } }
-stringData:
-  password: { secretKeyRef: { name: velocity-database-secret, key: POSTGRE_DB_ADMIN_PASS } }
